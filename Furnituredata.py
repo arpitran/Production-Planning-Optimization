@@ -1,0 +1,96 @@
+Products= [
+'prod1',
+'prod2',
+'prod3',
+'prod4',]
+process=[
+'drilling',
+'painting',
+'assembling',
+'cleaning',
+'packaging',]
+a={
+    ('prod1','drilling'):0.03,
+    ('prod2','drilling'):0.15,
+    ('prod3','drilling'):0.05,
+    ('prod4','drilling'):0.10,
+    ('prod1','painting'):0.06,
+    ('prod2','painting'):0.12,
+    ('prod3','painting'):0.00,
+    ('prod4','painting'):0.10,
+    ('prod1','assembling'):0.05,
+    ('prod2','assembling'):0.10,
+    ('prod3','assembling'):0.05,
+    ('prod4','assembling'):0.12,
+    ('prod1','cleaning'):0.04,
+    ('prod2','cleaning'):0.20,
+    ('prod3','cleaning'):0.03,
+    ('prod4','cleaning'):0.12,
+    ('prod1','packaging'):0.02,
+    ('prod2','packaging'):0.06,
+    ('prod3','packaging'):0.02,
+    ('prod4','packaging'):0.12,
+    }
+b={
+    ('drilling'):400,
+    ('painting'):400,
+    ('assembling'):500,
+    ('cleaning'):450,
+    ('packaging'):400,
+    }
+g={
+    ('prod1','drilling'):0,
+    ('prod2','drilling'):0,
+    ('prod3','drilling'):0,
+    ('prod4','drilling'):0,
+    ('prod1','painting'):0,
+    ('prod2','painting'):0,
+    ('prod3','painting'):0,
+    ('prod4','painting'):0,
+    ('prod1','assembling'):0,
+    ('prod2','assembling'):2.0,
+    ('prod3','assembling'):0,
+    ('prod4','assembling'):1.4,
+    ('prod1','cleaning'):0,
+    ('prod2','cleaning'):0,
+    ('prod3','cleaning'):0,
+    ('prod4','cleaning'):0,
+    ('prod1','packaging'):0,
+    ('prod2','packaging'):0,
+    ('prod3','packaging'):0,
+    ('prod4','packaging'):0
+    }
+h={
+    ('drilling'):0,
+    ('painting'):0,
+    ('assembling'):2000,
+    ('cleaning'):0,
+    ('packaging'):0
+    }
+l={
+    ('prod1'):1000,
+    ('prod2'):0,
+    ('prod3'):500,
+    ('prod4'):100
+    }
+u={
+    ('prod1'):6000,
+    ('prod2'):500,
+    ('prod3'):3000,
+    ('prod4'):1000
+    }
+s={
+    ('prod1'):10,
+    ('prod2'):25,
+    ('prod3'):16,
+    ('prod4'):20
+    }
+c={
+    ('prod1'):6,
+    ('prod2'):15,
+    ('prod3'):11,
+    ('prod4'):14
+    }
+
+import Furnituremodel
+Furnituremodel.solve(Products,process,a,b,g,h,l,u,s,c)
